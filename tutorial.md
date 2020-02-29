@@ -60,11 +60,11 @@ If unpaired reads:
 --trimmomatic  : run Trimmomatic to quality trim reads
 ```
 
-Basic:  
+Basic Trinity Command :  
 ```
 Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G
 ```
-Multiple fastq files:
+Multiple fastq files :
 ```
 Trinity --seqType fq --max_memory 50G  \
  --left condA_1.fq.gz, condB_1.fq.gz, condC_1.fq.gz \
@@ -88,7 +88,7 @@ Reference Assembly :
 Trinity --genome_guided_bam rnaseq_alignments.csorted.bam --max_memory 50G --genome_guided_max_intron 10000 --CPU 6
 ```
 
-# <sub><sub>**Assembly Statistics**
+# <sub>**Assembly Statistics**
 # <sub>**Hands-on**
 1. Go to your working directory for this tutorial \
   (if you don't have make one)
@@ -116,3 +116,4 @@ bowtie2-build trinity_out_dir/Trinity.fasta trinity_out_dir/Trinity.fasta
 
 bowtie2 --local --no-unal -x trinity_out_dir/Trinity.fasta -q -1 Sp_ds.left.fq -2 Sp_ds.right.fq | samtools view -b | samtools sort -o bowtie2.bam
 ```
+# <sub>**References**
