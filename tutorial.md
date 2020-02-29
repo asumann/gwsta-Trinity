@@ -110,7 +110,7 @@ sbatch slurm_trinity.sh
 ```
 perl /cta/apps/opt/spack/linux-ubuntu16.04-x86_64/gcc-8.2.0/trinity-2.6.6-y6rgxzwidaloosdtwksjxgqhethrs6ls/bin/util/TrinityStats.pl trinity_out_dir/Trinity.fasta
 ``` 
-1. Second part of assembly statistics with to view read representation on the assembly
+6. Second part of assembly statistics with to view read representation on the assembly
 ```
 bowtie2-build trinity_out_dir/Trinity.fasta trinity_out_dir/Trinity.fasta
 
