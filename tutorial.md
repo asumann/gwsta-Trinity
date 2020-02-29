@@ -59,7 +59,7 @@ The best paths which are supported by reads are chosen.
 >--trimmomatic                   : run Trimmomatic to quality trim reads
 
 Basic:  
->Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G 
+>```Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G ```
 
 Multiple fastq files:
 >Trinity --seqType fq --max_memory 50G \\ \
