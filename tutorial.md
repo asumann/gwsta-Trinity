@@ -58,13 +58,13 @@ The best paths which are supported by reads are chosen.
 >--trimmomatic                   : run Trimmomatic to quality trim reads```
 
 Basic:  
->### ```Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G ```
+> ```Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G ```
 
 Multiple fastq files:
-> ### ```Trinity --seqType fq --max_memory 50G ```  \
->### ```--left condA_1.fq.gz, condB_1.fq.gz, condC_1.fq.gz ```  \
->### ```--right condA_2.fq.gz, condB_2.fq.gz, condC_2.fq.gz  ``` \\  
->### ```--CPU 6```
+>  ```Trinity --seqType fq --max_memory 50G ```  \\ \
+> ```--left condA_1.fq.gz, condB_1.fq.gz, condC_1.fq.gz ```  \\ \
+> ```--right condA_2.fq.gz, condB_2.fq.gz, condC_2.fq.gz  ``` \\  
+> ```--CPU 6```
 >
 >>Or, create a tab-delimited file: 
 >>
@@ -78,7 +78,7 @@ Multiple fastq files:
 
 Reference Assembly :
 
->### ```Trinity --genome_guided_bam rnaseq_alignments.csorted.bam --max_memory 50G ```
+> ```Trinity --genome_guided_bam rnaseq_alignments.csorted.bam --max_memory 50G ```
 >```--genome_guided_max_intron 10000 --CPU 6```
 
 # <sub><sub>**Assembly Statistics**
@@ -86,18 +86,18 @@ Reference Assembly :
 1. Go to your working directory for this tutorial \
    (if you don't have make one)
 2. Copy the tutorial folder
-> ### ``` cp -r /cta/users/ainan/assembly_tutorial assembly_tutorial```
+>  ``` cp -r /cta/users/ainan/assembly_tutorial assembly_tutorial```
 >
 3. Run Trinity (EVERYTHING IS ALREADY IN THE SHELL SCRIPT)\
    It takes around 20 minutes
-> ### ```sbatch slurm_trinity.sh```
+>  ```sbatch slurm_trinity.sh```
 
 
-4. ### **Now, we will talk about assembly! Later, we will go back to hands-on part.**
+4.  **Now, we will talk about assembly! Later, we will go back to hands-on part.**
    
 5. Run perl script from your working directory for assembly statistics
-> ### ```perl /cta/apps/opt/spack/linux-ubuntu16.04-x86_64/gcc-8.2.0/trinity-2.6.6-y6rgxzwidaloosdtwksjxgqhethrs6ls/bin/util/TrinityStats.pl trinity_out_dir/Trinity.fasta ``` 
-6. Second part of assembly statistics with to view read representation on the assembly
->### ```bowtie2-build trinity_out_dir/Trinity.fasta trinity_out_dir/Trinity.fasta```
+>  ```perl /cta/apps/opt/spack/linux-ubuntu16.04-x86_64/gcc-8.2.0/trinity-2.6.6-y6rgxzwidaloosdtwksjxgqhethrs6ls/bin/util/TrinityStats.pl trinity_out_dir/Trinity.fasta ``` 
+1. Second part of assembly statistics with to view read representation on the assembly
+>```bowtie2-build trinity_out_dir/Trinity.fasta trinity_out_dir/Trinity.fasta```
 >
-> ### ```bowtie2 --local --no-unal -x trinity_out_dir/Trinity.fasta -q -1 Sp_ds.left.fq -2 Sp_ds.right.fq | samtools view -b | samtools sort -o bowtie2.bam```
+> ```bowtie2 --local --no-unal -x trinity_out_dir/Trinity.fasta -q -1 Sp_ds.left.fq -2 Sp_ds.right.fq | samtools view -b | samtools sort -o bowtie2.bam```
