@@ -17,7 +17,7 @@ Instead of reference genome, de Bruijn graphs are used as a reference in de-novo
 
 The best paths which are supported by reads are chosen.
 
-* **Overview**
+* **Overview of Trinity**
 
 ![](trinity_overview.png) 
 
