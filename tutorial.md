@@ -31,31 +31,36 @@ The best paths which are supported by reads are chosen.
 # <sub>**Syntax**
 
 * Required :
+```
+--seqType <string>      : type of reads ( fa, or fq )  
 
- > --seqType <string>      : type of reads ( fa, or fq )  
- >
- >--max_memory <string>  : suggested max memory to use by Trinity where limiting can be enabled. 
- >
- >If paired reads: \
- --left  <string>    : left reads, one or more file names (separated by commas, not spaces)\
- --right <string>: right reads, one or more file names (separated by commas, not spaces)
- >
- >If unpaired reads: \
- >--single <string>: single reads, one or more file names, comma-delimited (note, if single file contains pairs, can use flag: --run_as_paired )
+--max_memory <string>   : suggested max memory to use by Trinity where limiting can be enabled. 
+
+If paired reads: 
+
+--left  <string>    : left reads, one or more file names (separated by commas, not spaces)
+--right <string>: right reads, one or more file names (separated by commas,not spaces)
+
+If unpaired reads: 
+
+--single <string>   : single reads, one or more file names, comma-delimited (note, if single file contains pairs, can use flag: --run_as_paired)
+```
 
  
 
 * Optional :
 
-> --CPU <int>                     : number of CPUs to used default: 2
->
->--min_contig_length <int>       : minimum assembled contig length to report (def=200)
->
->--long_reads <string>           : fasta file containing error-corrected or circular consensus (CCS) pac bio reads
->
->--genome_guided_bam <string>    : genome guided mode
->
->--trimmomatic                   : run Trimmomatic to quality trim reads```
+```
+--CPU <int>                     : number of CPUs to used default: 2
+
+--min_contig_length <int>       : minimum assembled contig length to report (def=200)
+
+--long_reads <string>           : fasta file containing error-corrected or circular consensus (CCS) pac bio reads
+
+--genome_guided_bam <string>    : genome guided mode
+
+--trimmomatic                   : run Trimmomatic to quality trim reads
+```
 
 Basic:  
 > ```Trinity --seqType fq --left reads_1.fq --right reads_2.fq --CPU 6 --max_memory 20G ```
@@ -78,8 +83,7 @@ Multiple fastq files:
 
 Reference Assembly :
 
-> ```Trinity --genome_guided_bam rnaseq_alignments.csorted.bam --max_memory 50G ```
->```--genome_guided_max_intron 10000 --CPU 6```
+> ```Trinity --genome_guided_bam rnaseq_alignments.csorted.bam --max_memory 50G --genome_guided_max_intron 10000 --CPU 6```
 
 # <sub><sub>**Assembly Statistics**
 # <sub>**Hands-on**
