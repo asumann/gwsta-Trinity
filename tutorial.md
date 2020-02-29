@@ -1,7 +1,7 @@
 # De-novo Transcriptome Assembly Tutorial Using **Trinity**
 
 
-# <sub><sub>**What is happening during assembly?**
+# <sub>**What is happening during assembly?**
 
 
 * **k-mers**
@@ -17,7 +17,7 @@ Instead of reference genome, de Bruijn graphs are used as a reference in de-novo
 
 The best paths which are supported by reads are chosen.
 
-* **Overview**
+* **Overview of Trinity**
 
 ![](trinity_overview.png) 
 
@@ -28,7 +28,7 @@ The best paths which are supported by reads are chosen.
 
   Butterfly: Builds the most probable assembly for full length transcripts of isoforms and paralogs. It can distinguish paralogs, indeed.
 
-# <sub><sub>**Syntax**
+# <sub>**Syntax**
 
 * Required :
 
@@ -82,7 +82,7 @@ Reference Assembly :
 >--genome_guided_max_intron 10000 --CPU 6
 
 # <sub><sub>**Assembly Statistics**
-# <sub><sub>**Hands-on**
+# <sub>**Hands-on**
 1. Go to your working directory for this tutorial \
    (if you don't have make one)
 2. Copy the tutorial folder
