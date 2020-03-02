@@ -122,7 +122,7 @@ perl /cta/apps/opt/spack/linux-ubuntu16.04-x86_64/gcc-8.2.0/trinity-2.6.6-y6rgxz
 ```
 bowtie2-build trinity_out_dir/Trinity.fasta trinity_out_dir/Trinity.fasta
 
-bowtie2 --local --no-unal -x trinity_out_dir/Trinity.fasta -q -1 Sp_ds.left.fq -2 Sp_ds.right.fq | samtools view -b | samtools sort -o bowtie2.bam
+bowtie2 -p 10 -q --no-unal -k 20 -x trinity_out_dir/Trinity.fasta -1 Sp_ds.left.fq -2 Sp_ds.right.fq 2> align_stats.txt | samtools view -@10 -Sb -o bowtie2.bam
 ```
 # <sub>**One Step Further**
 
