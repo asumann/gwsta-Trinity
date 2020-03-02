@@ -141,4 +141,5 @@ Haas BJ, Papanicolaou A, Yassour M, Grabherr M, Blood PD, Bowden J, Couger MB, E
 # <sub>**Useful Links**
 
 Home page of Trinity: https://github.com/trinityrnaseq/trinityrnaseq/wiki
+
 Video explanation: https://www.broadinstitute.org/broade/trinity-screencast
