@@ -102,7 +102,7 @@ Trinity --genome_guided_bam rnaseq_alignments.csorted.bam --max_memory 50G --gen
   (if you don't have make one)
 2. Copy the tutorial folder
 ``` 
-cp -r /cta/users/ainan/assembly_tutorial assembly_tutorial
+cp -r /cta/users/ainan/gwsta_trinity_tutorial gwsta_trinity_tutorial
 ```
 
 3. Run Trinity (EVERYTHING IS ALREADY IN THE SHELL SCRIPT)\
